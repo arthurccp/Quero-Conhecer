@@ -13,6 +13,10 @@
 		0B2F2ED429534FB600E808B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B2F2ED229534FB600E808B7 /* Main.storyboard */; };
 		0B2F2ED629534FB900E808B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B2F2ED529534FB900E808B7 /* Assets.xcassets */; };
 		0B2F2ED929534FB900E808B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B2F2ED729534FB900E808B7 /* LaunchScreen.storyboard */; };
+		0B2F2EE1295350D800E808B7 /* PlacesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2F2EE0295350D800E808B7 /* PlacesTableViewController.swift */; };
+		0B2F2EE32953510900E808B7 /* PlaceFinderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2F2EE22953510900E808B7 /* PlaceFinderViewController.swift */; };
+		0B2F2EE52953624200E808B7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2F2EE42953624200E808B7 /* MapViewController.swift */; };
+		0B2F2EE72953671400E808B7 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2F2EE62953671400E808B7 /* Place.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		0B2F2ED529534FB900E808B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B2F2ED829534FB900E808B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B2F2EDA29534FB900E808B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B2F2EE0295350D800E808B7 /* PlacesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesTableViewController.swift; sourceTree = "<group>"; };
+		0B2F2EE22953510900E808B7 /* PlaceFinderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceFinderViewController.swift; sourceTree = "<group>"; };
+		0B2F2EE42953624200E808B7 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		0B2F2EE62953671400E808B7 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +68,13 @@
 				0B2F2ECE29534FB600E808B7 /* SceneDelegate.swift */,
 				0B2F2ED029534FB600E808B7 /* ViewController.swift */,
 				0B2F2ED229534FB600E808B7 /* Main.storyboard */,
+				0B2F2EE42953624200E808B7 /* MapViewController.swift */,
+				0B2F2EE22953510900E808B7 /* PlaceFinderViewController.swift */,
+				0B2F2EE0295350D800E808B7 /* PlacesTableViewController.swift */,
 				0B2F2ED529534FB900E808B7 /* Assets.xcassets */,
 				0B2F2ED729534FB900E808B7 /* LaunchScreen.storyboard */,
 				0B2F2EDA29534FB900E808B7 /* Info.plist */,
+				0B2F2EE62953671400E808B7 /* Place.swift */,
 			);
 			path = QueroConhecer;
 			sourceTree = "<group>";
@@ -139,7 +151,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B2F2ED129534FB600E808B7 /* ViewController.swift in Sources */,
+				0B2F2EE52953624200E808B7 /* MapViewController.swift in Sources */,
+				0B2F2EE1295350D800E808B7 /* PlacesTableViewController.swift in Sources */,
 				0B2F2ECD29534FB600E808B7 /* AppDelegate.swift in Sources */,
+				0B2F2EE32953510900E808B7 /* PlaceFinderViewController.swift in Sources */,
+				0B2F2EE72953671400E808B7 /* Place.swift in Sources */,
 				0B2F2ECF29534FB600E808B7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
