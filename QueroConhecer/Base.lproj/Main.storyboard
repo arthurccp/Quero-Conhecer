@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0th-tL-YcS">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -55,12 +56,12 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="H3E-67-O4u"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="COL-Gc-jHa">
                             <connections>
-                                <segue destination="CYH-II-jVH" kind="presentation" identifier="finderSegue" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="2e1-Ge-EXx"/>
+                                <segue destination="CYH-II-jVH" kind="presentation" identifier="" modalPresentationStyle="overFullScreen" id="n6u-6u-RjK"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="rSc-MG-MEj" kind="show" identifier="mapSegue" id="HF9-2F-rZd"/>
+                        <segue destination="rSc-MG-MEj" kind="show" identifier="mapSegue" id="VN0-LZ-PaC"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0d0-TC-lXK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -79,8 +80,8 @@
                                 <rect key="frame" x="0.0" y="143" width="390" height="667"/>
                                 <color key="backgroundColor" name="main"/>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Vhl-cq-25z">
-                                <rect key="frame" x="10" y="153" width="370" height="647"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Vhl-cq-25z">
+                                <rect key="frame" x="9" y="153" width="370" height="647"/>
                                 <subviews>
                                     <searchBar contentMode="redraw" text="" placeholder="Oque você deseja buscar" translatesAutoresizingMaskIntoConstraints="NO" id="MAN-Ga-M4H">
                                         <rect key="frame" x="0.0" y="0.0" width="370" height="44"/>
@@ -137,6 +138,10 @@
                                     </view>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="nVP-0g-PVX">
+                                <rect key="frame" x="176.66666666666666" y="400" width="37" height="37"/>
+                                <color key="color" name="main"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0wl-nF-6hc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -146,7 +151,9 @@
                             <constraint firstItem="Vhl-cq-25z" firstAttribute="top" secondItem="0wl-nF-6hc" secondAttribute="top" constant="10" id="PHK-1u-c7u"/>
                             <constraint firstItem="0wl-nF-6hc" firstAttribute="trailing" secondItem="bSM-Zq-j1M" secondAttribute="trailing" id="V6z-j5-euR"/>
                             <constraint firstItem="bSM-Zq-j1M" firstAttribute="top" secondItem="0wl-nF-6hc" secondAttribute="top" id="X6g-DK-kC4"/>
+                            <constraint firstItem="nVP-0g-PVX" firstAttribute="centerY" secondItem="2SJ-Ok-AFa" secondAttribute="centerY" id="XxC-RX-MB0"/>
                             <constraint firstItem="Vhl-cq-25z" firstAttribute="leading" secondItem="0wl-nF-6hc" secondAttribute="leading" constant="10" id="gFB-Xs-t9q"/>
+                            <constraint firstItem="nVP-0g-PVX" firstAttribute="centerX" secondItem="2SJ-Ok-AFa" secondAttribute="centerX" id="hve-pl-Le3"/>
                             <constraint firstItem="bSM-Zq-j1M" firstAttribute="leading" secondItem="0wl-nF-6hc" secondAttribute="leading" id="mJp-Qw-hPv"/>
                             <constraint firstItem="Vhl-cq-25z" firstAttribute="trailing" secondItem="0wl-nF-6hc" secondAttribute="trailing" constant="-10" id="mls-Vv-VM2"/>
                         </constraints>
@@ -161,6 +168,7 @@
                     <connections>
                         <outlet property="lbAddress" destination="Ztv-7D-4wV" id="vom-2g-gED"/>
                         <outlet property="lbName" destination="kBx-gV-jRE" id="Xyb-M6-tDT"/>
+                        <outlet property="loading" destination="nVP-0g-PVX" id="1Hw-tt-lQj"/>
                         <outlet property="mapView" destination="2SJ-Ok-AFa" id="FFx-Cl-G8l"/>
                         <outlet property="searchBar" destination="MAN-Ga-M4H" id="sMF-3M-ftf"/>
                         <outlet property="viInfo" destination="cXn-B5-Fke" id="QR9-jO-k9s"/>
@@ -275,6 +283,7 @@
                             <constraint firstItem="V5D-4K-5Ve" firstAttribute="trailing" secondItem="XYW-Mf-XDN" secondAttribute="trailing" constant="15" id="jaw-hm-UiV"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="1qR-La-82J"/>
                     <connections>
                         <outlet property="aiLoading" destination="X7N-9a-Ii7" id="VUM-6o-gCp"/>
                         <outlet property="mapView" destination="9a9-5i-MN5" id="6mB-64-dBI"/>
@@ -307,7 +316,7 @@
         <image name="cancel" width="30" height="30"/>
         <image name="cellIcon" width="40" height="40"/>
         <namedColor name="main">
-            <color red="0.0039215686274509803" green="0.71764705882352942" blue="0.8901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0040000001899898052" green="0.71799999475479126" blue="0.88999998569488525" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
